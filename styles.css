@@ -1,0 +1,38 @@
+body {
+	text-align: center;
+	margin: 0;
+}
+h1 {
+	font-family: Raleway, serif;
+	font-size: 45px;
+	color: #0d2c40;
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin: 0;
+}
+header {
+	background-color: #f15b31;
+	color: #FFFFFF;
+	padding: 30px 20px 30px 20px;
+}
+nav {
+	/*color: #FFFFFF;*/
+	background-color: #00a6b3;
+	padding: 20px 0;
+}
+a {
+	text-decoration: none;
+	font-family: Raleway, serif; 
+	font-size:18px;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	font-weight: 600;
+	margin: 0 20px;
+}
+main {
+	width: 850px;
+	margin: 35px auto;
+}
+img {
+	margin: 40px 8px 0 8px;
+}
