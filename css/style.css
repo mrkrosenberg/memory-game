@@ -23,6 +23,10 @@ nav {
 	padding: 20px 0;
 }
 
+nav a {
+	display: inline-block;
+}
+
 h2 {
 	font-family: "Raleway", serif;
 	color: #F15B31;
