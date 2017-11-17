@@ -5,12 +5,15 @@ var cardOne = cards[0];
 cardsInPlay.push(cardOne);
 console.log("User flipped" + " " + cardOne);
 
-var cardTwo = cards[2];
+var cardTwo = cards[1];
 cardsInPlay.push(cardTwo);
 console.log("User flipped" + " " + cardTwo);
 
-if (length.cardsInPlay === 2) {
-	else if (cardsInPlay[0] === cardsInPlay[1]);
+if (cardsInPlay.length === 2) {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
 	alert("That's a match!");
-	else (cardsInPlay[0] === !cardsInPlay[1]);
+	} 	
+else { 
+	alert("Sorry, try again!")
+	}
 }
