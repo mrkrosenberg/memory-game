@@ -2,7 +2,7 @@ var cards = [
 {
 	rank: "queen",
 	suit: "hearts",
-	cardImage: "images/queen-of-hearts.png"
+	cardImage: "images/queen-of-hearts.png"	
 },
 {
 	rank: "queen",
@@ -17,18 +17,19 @@ var cards = [
 {
 	rank: "king",
 	suit: "diamonds", 
-	cardImage: "images/king-of-diamonds"
+	cardImage: "images/king-of-diamonds"	
 }
 ];
 var cardsInPlay = [];
 
 
 var checkForMatch = function () {
+if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-//console.log("You found a match!");
+alert("You found a match!");
 } else {
-//console.log("Sorry, try again.");
-	//wasn't sure which assignment the console.log statements came from 
+alert("Sorry, try again.");
+}
 }
 }
 
@@ -38,13 +39,13 @@ var flipCard = function() {
 	console.log("User flipped " + cards[cardId].rank);
 	checkForMatch();
 	this.setAttribute("src", cards[cardId].cardImage)
-if (cardsInPlay.length === 2) {
+/*if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 	alert("That's a match!");
 	} else { 
 	alert("Sorry, try again!")
 	}
-}
+}*/
 	console.log(cards[cardId].suit);
 	console.log(cards[cardId].cardImage);	
 }
@@ -57,14 +58,18 @@ var createBoard = function() {
 	cardElement.addEventListener("click", flipCard);
 	document.getElementById('game-board').appendChild(cardElement);
 	}
+}
+
+var resetButton = function() {
 
 }
 
 
 createBoard();
-flipCard();
+//flipCard();
 
 //clicking the same card twice scores a match. not sure how to fix this.
+//4th card clicked disappears
 
 
 
