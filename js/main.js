@@ -37,7 +37,7 @@ var flipCard = function() {
 	cardsInPlay.push(cards[cardId].rank);
 	console.log("User flipped " + cards[cardId].rank);
 	checkForMatch();
-	this.setAttribute("src", console.log(cards[cardId].cardImage))
+	this.setAttribute("src", cards[cardId].cardImage)
 if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 	alert("That's a match!");
@@ -52,15 +52,19 @@ if (cardsInPlay.length === 2) {
 var createBoard = function() {
 	for (var i = 0; i < cards.length; i++) {
 	var cardElement = document.createElement("img");
-	cardElement.setAttribute("img", "images/back.png");
+	cardElement.setAttribute("src", "images/back.png");
 	cardElement.setAttribute("data-id", i);
-	cardElement.addEventListener("click", "flipCard");
-	cardElement.appendChild("game-board");
+	cardElement.addEventListener("click", flipCard);
+	document.getElementById('game-board').appendChild(cardElement);
 	}
 
 }
 
-flipCard;
+
+createBoard();
+flipCard();
+
+//clicking the same card twice scores a match. not sure how to fix this.
 
 
 
