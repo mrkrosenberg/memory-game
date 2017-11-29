@@ -35,10 +35,10 @@ alert("Sorry, try again.");
 
 var flipCard = function() {
 	var cardId = this.getAttribute("data-id");
-	cardsInPlay.push(cards[cardId].rank);
-	console.log("User flipped " + cards[cardId].rank);
+	cardsInPlay.push(cards[cardId].rank);  //What does this line do?
+	console.log("User flipped " + cards[cardId].rank); // What does this line do?
 	checkForMatch();
-	this.setAttribute("src", cards[cardId].cardImage)
+	this.setAttribute("src", cards[cardId].cardImage);
 /*if (cardsInPlay.length === 2) {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 	alert("That's a match!");
@@ -60,8 +60,8 @@ var createBoard = function() {
 	}
 }
 
-var resetButton = function() {
-
+var gameReset = function() {
+	var resetButton = document.createElement("button").textContent("Play Again!")
 }
 
 
